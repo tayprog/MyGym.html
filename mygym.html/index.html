@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MyGym</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+  <header class="navbar">
+
+    <div class="logo">
+      <img src="img/logo.jpeg" alt="Logo MyGym">
+
+      <h1>My<span>Gym</span></h1>
+    </div>
+
+    <nav id="menu">
+      <ul>
+
+        <li>
+          <a href="#" class="active">
+            Início
+          </a>
+        </li>
+
+        <li>
+          <a href="#services-page" onclick="mostrarServicos()">
+            Serviços
+          </a>
+        </li>
+
+        <li>
+          <a href="#plans-page" onclick="mostrarPlanos()">
+            Planos
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact">
+            Contato
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- MENU MOBILE -->
+    <button class="menu-toggle" onclick="toggleMenu()">
+      ☰
+    </button>
+
+    <!-- BOTÃO -->
+    <a class="join-btn" onclick="joinNow()">
+      Entrar
+    </a>
+
+  </header>
+
+  <!-- =========================
+       HERO
+  ========================== -->
+  <section class="hero">
+
+    <!-- CARROSSEL -->
+    <div class="carousel">
+
+      <img src="img/gym2.jpeg" class="slide active" alt="Academia">
+      <img src="img/gym3.jpeg" class="slide" alt="Treino">
+      <img src="img/gym4.webp" class="slide" alt="Fitness">
+      
+
+    </div>
+
+    <div class="hero-content">
+
+      <h1>
+        TRANSFORME SEU <span>CORPO</span>
+      </h1>
+
+      <p>
+        O melhor treino da sua vida começa hoje!
+      </p>
+
+      <a class="start-btn" onclick="startNow()">
+        Começar Agora
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       SERVIÇOS
+  ========================== -->
+  <section id="services-page" class="services-page">
+
+    <h1>Nossos Serviços 💪</h1>
+
+    <div class="services-container">
+
+      <div class="service-card">
+        <h2>Musculação</h2>
+        <p>Treinos completos para ganho de massa e força.</p>
+      </div>
+
+      <div class="service-card">
+        <h2>Cardio</h2>
+        <p>Exercícios para melhorar resistência e queimar gordura.</p>
+      </div>
+
+      <div class="service-card">
+        <h2>Jiu-Jitsu</h2>
+        <p>Melhora resistência e condicionamento físico.</p>
+      </div>
+
+      <div class="service-card">
+        <h2>Personal Trainer</h2>
+        <p>Acompanhamento individual para melhores resultados.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       CARDS EXTRAS
+  ========================== -->
+  <section class="services">
+
+    <div class="card">
+      <i class="fa-solid fa-dumbbell icon"></i>
+      <h3>Aulas em Grupo</h3>
+      <p>Aulas coletivas para mais motivação.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-dumbbell icon"></i>
+      <h3>Aberto 24/7</h3>
+      <p>Treine a qualquer hora do dia.</p>
+    </div>
+
+  </section>
+
+  <!-- =========================
+       PLANOS
+  ========================== -->
+  <section id="plans-page" class="plans-page">
+
+    <h1>Nossos Planos</h1>
+
+    <div class="plans-container">
+
+      <div class="plan-card">
+        <h2>Básico</h2>
+        <p class="price">R$ 59/mês</p>
+        <p>Acesso à musculação</p>
+        <button>Escolher</button>
+      </div>
+
+      <div class="plan-card destaque">
+        <h2>Premium</h2>
+        <p class="price">R$ 99/mês</p>
+        <p>Musculação + Cardio</p>
+        <button>Escolher</button>
+      </div>
+
+      <div class="plan-card">
+        <h2>Elite</h2>
+        <p class="price">R$ 149/mês</p>
+        <p>Todos os serviços + Personal</p>
+        <button>Escolher</button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       PLANOS RÁPIDOS
+  ========================== -->
+  <section id="plans" class="services">
+
+    <div class="card" onclick="planSelect('Básico')">
+      Plano Básico
+    </div>
+
+    <div class="card" onclick="planSelect('Premium')">
+      Plano Premium
+    </div>
+
+    <div class="card" onclick="planSelect('Elite')">
+      Plano Elite
+    </div>
+
+  </section>
+
+  <!-- =========================
+       CONTATO
+  ========================== -->
+  <section id="contact" class="contact-page">
+
+    <h1>Fale com a gente 📞</h1>
+
+    <form class="contact-form" onsubmit="enviarFormulario(event)">
+
+      <input type="text" placeholder="Seu nome" required>
+
+      <input type="email" placeholder="Seu email" required>
+
+      <textarea placeholder="Sua mensagem" required></textarea>
+
+      <button type="submit">Enviar</button>
+
+    </form>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
