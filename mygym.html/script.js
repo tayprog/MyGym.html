@@ -1,6 +1,46 @@
+const API_URL = "http://localhost:8080/api";
 // MENU MOBILE
 function toggleMenu() {
 document.getElementById("menu").classList.toggle("active");
+}
+
+async function enviarFormulario(event) {
+event.preventDefault();
+
+
+const dados = {
+    nome: document.getElementById("nome").value,
+    email: document.getElementById("email").value,
+    mensagem: document.getElementById("mensagem").value
+};
+
+try {
+    const response = await fetch("http://localhost:8080/api/contato", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(dados)
+    });
+
+    const resultado = await response.json();
+
+    if (response.ok) {
+        alert(resultado.mensagem);
+
+        document.getElementById("nome").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("mensagem").value = "";
+    } else {
+        alert(resultado.erro);
+    }
+
+} catch (error) {
+    console.error(error);
+    alert("Erro ao conectar com a API.");
+}
+
+
 }
 
 // MOSTRAR SERVIÇOS

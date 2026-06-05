@@ -213,19 +213,40 @@
   ========================== -->
   <section id="contact" class="contact-page">
 
-    <h1>Fale com a gente 📞</h1>
+  <h1>Fale com a gente 📞</h1>
 
-    <form class="contact-form" onsubmit="enviarFormulario(event)">
+  <form class="contact-form" onsubmit="enviarFormulario(event)">
 
-      <input type="text" placeholder="Seu nome" required>
+```
+<input
+  id="nome"
+  type="text"
+  placeholder="Seu nome"
+  required
+>
 
-      <input type="email" placeholder="Seu email" required>
+<input
+  id="email"
+  type="email"
+  placeholder="Seu email"
+  required
+>
 
-      <textarea placeholder="Sua mensagem" required></textarea>
+<textarea
+  id="mensagem"
+  placeholder="Sua mensagem"
+  required
+></textarea>
 
-      <button type="submit">Enviar</button>
+<button type="submit">
+  Enviar
+</button>
+```
 
-    </form>
+  </form>
+
+</section>
+
 
   </section>
 
